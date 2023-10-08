@@ -1,0 +1,25 @@
+.axil-best-seller-product-area.bg-color-white.axil-section-gap.pt--0 {
+    background: #1f2548;
+  }
+
+.bg-nav {
+    background-color: #1f2548;
+}
+
+#search2 {
+    border-color: #fb7210;
+    color: black;
+}
+
+.far.fa-search {
+    color: #fb7210;
+}
+
+.axil-search {
+    background: white;
+    border-radius: 5px;
+}
+
+.flaticon-heart, .flaticon-shopping-cart, .flaticon-person{
+    color: white;
+}

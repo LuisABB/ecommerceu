@@ -11,8 +11,8 @@ declare function HOMEINITTEMPLATE([]):any;
 export class AppComponent implements OnInit{
   title = 'ecommerce';
   ngOnInit(): void{
-    setTimeout(()=>{
-      HOMEINITTEMPLATE($);
-    },50);
+    //setTimeout(()=>{
+    //  HOMEINITTEMPLATE($);
+    //},50);
   }
 }

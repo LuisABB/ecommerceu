@@ -1,5 +1,10 @@
 
 /* Page Loader */
+
+body{
+	background-color: #1f2548;
+}
+
 .animation-block {
 	position: relative;
 }
