@@ -17,6 +17,12 @@ export class HomeComponent implements OnInit {
   bestProducts: any = [];
   our_products: any = [];
   product_selected: any = null;
+  marks: any = [];
+  // marks = [
+  //   ['https://www.sprintcopy.com/wp-content/uploads/2020/06/logo-coca-cola-600x208.png', 'https://www.sprintcopy.com/wp-content/uploads/2020/06/logo-coca-cola-600x208.png', 'https://www.sprintcopy.com/wp-content/uploads/2020/06/logo-coca-cola-600x208.png'],
+  //   ['https://www.sprintcopy.com/wp-content/uploads/2020/06/logo-coca-cola-600x208.png', 'https://www.sprintcopy.com/wp-content/uploads/2020/06/logo-coca-cola-600x208.png', 'https://www.sprintcopy.com/wp-content/uploads/2020/06/logo-coca-cola-600x208.png'],
+  // ];
+
 
   constructor(
     public homeService: HomeService,
@@ -28,6 +34,8 @@ export class HomeComponent implements OnInit {
       this.categories = resp.categorie;
       this.bestProducts = resp.best_products;
       this.our_products = resp.our_products;
+      this.marks = this.chunkArray(resp.marks, 4);
+      console.log(resp);
       setTimeout(() => {
         HOMEINITTEMPLATE($);
       }, 50);
@@ -36,6 +44,17 @@ export class HomeComponent implements OnInit {
 
   }
 
+  chunkArray(arr: any[], chunkSize: number): any[] {
+    const groups = [];
+    for (let i = 0; i < arr.length; i += chunkSize) {
+      groups.push(arr.slice(i, i + chunkSize));
+    }
+    console.log("GROUP")
+    console.log(groups)
+    return groups;
+  }
+
+
   OpenModal(bestProd: any) {
     this.product_selected = null;
 
@@ -43,6 +62,7 @@ export class HomeComponent implements OnInit {
       this.product_selected = bestProd;
       setTimeout(() => {
         ModalProductDetail();
+        
       }, 50);
     },100);
 

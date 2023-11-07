@@ -1,0 +1,19 @@
+.zero-margin{
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.center-page {
+    display: grid;
+    justify-content: center;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: var(--color-heading) !important;
+    border-color: var(--color-heading) !important;
+  }
+
+.axil-product .cart-action li.select-option a{
+  width: 12rem;
+}
